@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KIKO | Kalkulator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="carousel">
+        <div class="slide">
+            <div class="card kalkulator">
+                <input type="text" id="display" disabled>
+                <div>
+                    <button value="del">Del</button>
+                    <button value="c">C</button>
+                    <button value="÷">÷</button>
+                </div>
+                <div>
+                    <button value="1">1</button>
+                    <button value="2">2</button>
+                    <button value="3">3</button>
+                    <button value="×">×</button>
+                </div>
+                <div>
+                    <button value="4">4</button>
+                    <button value="5">5</button>
+                    <button value="6">6</button>
+                    <button value="-">-</button>
+                </div>
+                <div>
+                    <button value="7">7</button>
+                    <button value="8">8</button>
+                    <button value="9">9</button>
+                    <button value="+">+</button>
+                </div>
+                <div>
+                    <button value=".">.</button>
+                    <button value="0">0</button>
+                    <button value="=">=</button>
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="card">
+                <h3>KOMBINASI</h3>
+                <div class="content">
+                    <input type="number" placeholder="n" id="n1" onkeypress="return limitLength(event, this, 2)">
+                    <p>C</p>
+                    <input type="number" placeholder="x" id="x1" onkeypress="return limitLength(event, this, 2)">
+                </div>
+                <div class="result_c">
+                    <p id="result_c">SUBMIT</p>
+                    <img src="x.svg" alt="close">
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="card">
+                <h3>PERMUTASI</h3>
+                <div class="content">
+                    <input type="number" placeholder="n" id="n2" onkeypress="return limitLength(event, this, 2)">
+                    <p>P</p>
+                    <input type="number" placeholder="x" id="x2" onkeypress="return limitLength(event, this, 2)">
+                </div>
+                <div class="result_p">
+                    <p id="result_p">SUBMIT</p>
+                    <img src="x.svg" alt="close">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pagination-dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+    <div class="alert">
+        <div class="alert_icon">
+            <img src="alert.svg" alt="alert">
+        </div>
+        <div class="alert_msg">
+            <p>Notifikasi</p>
+            <p id="alert">Message</p>
+        </div>
+        <img src="x.svg" alt="close" class="close_btn">
+    </div>
+
+    <div class="footer">
+        <p id="copyright">Copyright ©[Year] zekoodev. All Rights Reserved</p>
+    </div>
+
+    <video autoplay loop muted plays-inline class="back-video">
+        <source src="" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
